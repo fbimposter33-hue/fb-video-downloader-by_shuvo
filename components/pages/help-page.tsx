@@ -34,6 +34,11 @@ export function HelpPage({ onBack }: HelpPageProps) {
       answer:
         "Downloads may fail due to invalid URLs, private videos, or temporary server issues. Make sure you're using a valid public Facebook video URL.",
     },
+    {
+      question: " Who made it?", 
+    answer:
+    		"SHUVO AHMED"
+    },
   ]
 
   const steps = [
