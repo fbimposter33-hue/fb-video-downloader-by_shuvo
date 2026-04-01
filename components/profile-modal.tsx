@@ -30,7 +30,7 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
       color: "text-black hover:text-gray-700",
     },
     {
-      icon: Send,
+      icon: "Send",
       label: "Telegram",
       href: "t.me/shuvo_9882",
       color: "text-green-600 hover:text-green-700",
