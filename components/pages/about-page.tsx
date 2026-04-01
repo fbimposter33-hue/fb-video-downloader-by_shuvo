@@ -138,10 +138,10 @@ export function AboutPage({ onBack }: AboutPageProps) {
             <div className="max-w-md mx-auto bg-card p-6 border border-border">
               <div className="space-y-4">
                 <div className="w-20 h-20 bg-primary mx-auto flex items-center justify-center">
-                  <span className="text-primary-foreground font-display font-bold text-2xl">HI</span>
+                  <span className="text-primary-foreground font-display font-bold text-2xl">SHUVO</span>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-display font-bold text-xl text-card-foreground">Hasan Islam</h3>
+                  <h3 className="font-display font-bold text-xl text-card-foreground">SHUVO AHMED</h3>
                   <p className="text-muted-foreground text-sm text-pretty">
                     Full-stack developer passionate about creating beautiful and functional web applications.
                     Specialized in React, Next.js, and modern web technologies.
