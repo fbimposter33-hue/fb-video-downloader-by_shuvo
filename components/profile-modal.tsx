@@ -16,7 +16,7 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://facebook.com/SWEETxFIRE",
+      href: "https://www.facebook.com/shuvo.ahmead.7543",
       color: "text-blue-600 hover:text-blue-700",
     },
     {
@@ -26,13 +26,13 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
         </svg>
       ),
       label: "TikTok",
-      href: "https://tiktok.com/@hasan_x_fire",
+      href: "https://www.tiktok.com/@shuvonx9?_r=1&_t=ZS-95AiP3ykwrd",
       color: "text-black hover:text-gray-700",
     },
     {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      href: "https://wa.me/8801744298642",
+      icon: Send,
+      label: "Telegram",
+      href: "t.me/shuvo_9882",
       color: "text-green-600 hover:text-green-700",
     },
   ]
@@ -56,8 +56,8 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
           <div className="text-center space-y-4">
             <Avatar className="w-24 h-24 mx-auto">
               <AvatarImage
-                src="https://trickbd.com/wp-content/uploads/2025/08/03/cropped-ssstik.io_1754157026441-300x300.jpeg"
-                alt="Hasan Islam"
+                src="https://image2url.com/r2/default/images/1775036582768-005b356d-66f2-4ff9-bbcb-b06d387c8a50.jpg"
+                alt="SHUVO AHMED"
               />
               <AvatarFallback className="text-2xl font-display font-bold bg-primary text-primary-foreground">
                 H
@@ -65,7 +65,7 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
             </Avatar>
 
             <div className="space-y-2">
-              <h3 className="font-display font-bold text-xl text-card-foreground">Hasan Islam</h3>
+              <h3 className="font-display font-bold text-xl text-card-foreground">SHUVO AHMED</h3>
               <p className="text-muted-foreground text-sm text-pretty">
                 Full-stack developer passionate about creating beautiful and functional web applications. Specialized in
                 React, Next.js, and modern web technologies. Always learning and building something new.
