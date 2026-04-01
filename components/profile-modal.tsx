@@ -3,156 +3,116 @@
 import { X, Facebook, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { motion } from "framer-motion"
-import type { ComponentType } from "react"
+
+/* ----------------- TikTok Icon Component ----------------- */
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+  >
+    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.404-5.965 1.404-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+  </svg>
+)
 
 interface ProfileModalProps {
   isOpen: boolean
   onClose: () => void
 }
 
-/* ---------------- ICON TYPE ---------------- */
-
-type IconType = ComponentType<{ className?: string }>
-
-/* ---------------- TIKTOK ICON (FIXED) ---------------- */
-
-const TikTokIcon: IconType = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M21 8.5a7.5 7.5 0 01-4.5-1.5v6.75a6.25 6.25 0 11-6.25-6.25c.25 0 .5.02.75.05v3.1a3.25 3.25 0 103.25 3.25V0h3a4.5 4.5 0 003.75 3.75v4.75z" />
-  </svg>
-)
-
 export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
   if (!isOpen) return null
 
-  const contactLinks: {
-    icon: IconType
-    label: string
-    href: string
-    color: string
-    glow: string
-  }[] = [
+  /* ----------------- CONTACT LINKS ----------------- */
+  const contactLinks = [
     {
       icon: Facebook,
       label: "Facebook",
       href: "https://www.facebook.com/shuvo.ahmead.7543",
-      color: "text-blue-600",
-      glow: "hover:shadow-blue-500/30",
+      color: "text-blue-600 hover:text-blue-700",
     },
     {
       icon: TikTokIcon,
       label: "TikTok",
       href: "https://www.tiktok.com/@shuvonx9",
-      color: "text-black dark:text-white",
-      glow: "hover:shadow-white/20",
+      color: "text-black hover:text-gray-700",
     },
     {
       icon: Send,
       label: "Telegram",
       href: "https://t.me/shuvo_9882",
-      color: "text-sky-500",
-      glow: "hover:shadow-sky-500/30",
+      color: "text-sky-500 hover:text-sky-600",
     },
   ]
 
   return (
     <>
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 bg-black/50 z-50" onClick={onClose} />
 
-      {/* Premium Modal */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 40 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.25 }}
-        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-        w-full max-w-md mx-4
-        rounded-2xl
-        bg-white/70 dark:bg-black/40
-        backdrop-blur-xl
-        border border-border
-        shadow-2xl
-        z-50"
-      >
-        {/* Header */}
+      {/* Profile Modal */}
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4 bg-card border border-border z-50 animate-slide-in-right">
         <div className="flex items-center justify-between p-4 border-b border-border">
-          <h2 className="font-semibold text-lg">Profile</h2>
+          <h2 className="font-display font-semibold text-lg text-card-foreground">Profile</h2>
           <Button variant="ghost" size="sm" onClick={onClose}>
             <X className="w-5 h-5" />
           </Button>
         </div>
 
         <div className="p-6 space-y-6">
-          {/* Avatar */}
+          {/* Profile Photo & Name */}
           <div className="text-center space-y-4">
-            <Avatar className="w-24 h-24 mx-auto ring-4 ring-primary/20">
-              <AvatarImage src="https://image2url.com/r2/default/images/1775036582768-005b356d-66f2-4ff9-bbcb-b06d387c8a50.jpg" />
-              <AvatarFallback>H</AvatarFallback>
+            <Avatar className="w-24 h-24 mx-auto">
+              <AvatarImage
+                src="https://image2url.com/r2/default/images/1775036582768-005b356d-66f2-4ff9-bbcb-b06d387c8a50.jpg"
+                alt="SHUVO AHMED"
+              />
+              <AvatarFallback className="text-2xl font-display font-bold bg-primary text-primary-foreground">
+                H
+              </AvatarFallback>
             </Avatar>
 
-            <div>
-              <h3 className="text-xl font-bold">SHUVO AHMED</h3>
-              <p className="text-sm text-muted-foreground">
-                Full-stack developer passionate about modern web apps using
-                React & Next.js.
+            <div className="space-y-2">
+              <h3 className="font-display font-bold text-xl text-card-foreground">SHUVO AHMED</h3>
+              <p className="text-muted-foreground text-sm text-pretty">
+                Full-stack developer passionate about creating beautiful and functional web applications. Specialized in
+                React, Next.js, and modern web technologies. Always learning and building something new.
               </p>
             </div>
           </div>
 
-          {/* Premium Social Links */}
+          {/* Contact Links */}
           <div className="space-y-3">
-            <h4 className="font-semibold">Connect with me</h4>
-
-            <div className="grid gap-3">
-              {contactLinks.map((link, i) => {
+            <h4 className="font-display font-semibold text-base text-card-foreground">Connect with me</h4>
+            <div className="grid gap-2">
+              {contactLinks.map((link) => {
                 const Icon = link.icon
-
                 return (
-                  <motion.a
+                  <a
                     key={link.label}
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.08 }}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    className={`group flex items-center gap-4 p-4 rounded-xl
-                    border border-border
-                    bg-muted/40 backdrop-blur
-                    transition-all duration-300
-                    hover:shadow-lg ${link.glow}`}
+                    className="flex items-center gap-3 p-3 bg-muted hover:bg-accent/10 transition-colors border border-border rounded-lg"
                   >
-                    <div
-                      className={`p-2 rounded-lg bg-background ${link.color}`}
-                    >
+                    <div className={`${link.color}`}>
                       <Icon className="w-5 h-5" />
                     </div>
-
-                    <span className="font-medium">{link.label}</span>
-
-                    <span className="ml-auto opacity-0 group-hover:opacity-100 transition">
-                      →
-                    </span>
-                  </motion.a>
+                    <span className="font-medium text-card-foreground">{link.label}</span>
+                  </a>
                 )
               })}
             </div>
           </div>
 
-          {/* Footer */}
+          {/* Additional Info */}
           <div className="pt-4 border-t border-border text-center">
             <p className="text-xs text-muted-foreground">
-              Thanks for using our TikTok downloader ✨
+              Thanks for using our TikTok downloader! Feel free to reach out if you have any questions.
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   )
 }
