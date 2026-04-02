@@ -27,22 +27,22 @@ export function ContactPage({ onBack }: ContactPageProps) {
       icon: Mail,
       title: "Email Support",
       description: "Get help via email",
-      value: "kinghasanbd1@gmail.com",
-      action: "mailto:kinghasanbd1@gmail.com",
+      value: "nazirahmeds9876@gmail.com",
+      action: "mailto:nazirahmeds9876@gmail.com",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Chat with us on WhatsApp",
-      value: "+8801744298642",
-      action: "https://wa.me/8801744298642",
+      value: "01749564514",
+      action: "https://wa.me/8801749564514",
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Call us directly",
-      value: "+8801744298642",
-      action: "tel:+8801744298642",
+      value: "+88017*******",
+      action: "tel:+88017*******",
     },
   ]
 
@@ -198,7 +198,7 @@ export function ContactPage({ onBack }: ContactPageProps) {
                       <div className="space-y-1">
                         <h3 className="font-display font-semibold text-sm">Office Location</h3>
                         <p className="text-muted-foreground text-sm">
-                          Nilphamari, Rangpur City
+                          Homna, Cumilla City
                           <br />
                           Bangladesh
                         </p>
