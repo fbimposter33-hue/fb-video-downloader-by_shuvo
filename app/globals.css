@@ -3,86 +3,95 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * Goriberbondhu theme — full structural redesign (same system as
+ * YouTube v8 / Instagram v2): Warm Snow #FBF8F1, Deep Purple #2E1B33,
+ * Vivid Pink #FF2E7E, Marigold #FFB020, Baloo Da 2 + Hind Siliguri,
+ * 16/28px corners, hard offset shadows.
+ */
 :root {
-  /* Updated color tokens to match Facebook's blue color scheme */
-  --background: #ffffff;
-  --foreground: #1c1e21;
-  --card: #f0f2f5;
-  --card-foreground: #1c1e21;
+  --background: #fbf8f1;
+  --foreground: #2e1b33;
+  --card: #ffffff;
+  --card-foreground: #2e1b33;
   --popover: #ffffff;
-  --popover-foreground: #1c1e21;
-  --primary: #1877f2;
+  --popover-foreground: #2e1b33;
+  --primary: #ff2e7e;
   --primary-foreground: #ffffff;
-  --secondary: #42a5f5;
-  --secondary-foreground: #ffffff;
-  --muted: #f0f2f5;
-  --muted-foreground: #65676b;
-  --accent: #42a5f5;
-  --accent-foreground: #ffffff;
-  --destructive: #f02849;
+  --secondary: #ffb020;
+  --secondary-foreground: #2e1b33;
+  --muted: #fff9f0;
+  --muted-foreground: #6b5a70;
+  --accent: #ffb020;
+  --accent-foreground: #2e1b33;
+  --destructive: #e11d48;
   --destructive-foreground: #ffffff;
-  --border: #dadde1;
-  --input: #f0f2f5;
-  --ring: #1877f2;
-  --chart-1: #1877f2;
-  --chart-2: #42a5f5;
-  --chart-3: #66bb6a;
-  --chart-4: #ab47bc;
-  --chart-5: #ef5350;
-  --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #1c1e21;
-  --sidebar-primary: #f0f2f5;
-  --sidebar-primary-foreground: #1c1e21;
-  --sidebar-accent: #1877f2;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #dadde1;
-  --sidebar-ring: #1877f2;
+  --border: #e1dad0;
+  --input: #e1dad0;
+  --ring: #ff2e7e;
+  --chart-1: #ff2e7e;
+  --chart-2: #ffb020;
+  --chart-3: #00a878;
+  --chart-4: #ff9a3d;
+  --chart-5: #25d366;
+  --radius: 1rem;
+  --sidebar: #fffdf8;
+  --sidebar-foreground: #2e1b33;
+  --sidebar-primary: #ff2e7e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fff9f0;
+  --sidebar-accent-foreground: #2e1b33;
+  --sidebar-border: #e1dad0;
+  --sidebar-ring: #ff2e7e;
+  --ink: #2e1b33;
+  --warm-snow: #fbf8f1;
+  --outline-pale: #f3e7d3;
 }
 
 .dark {
-  /* Updated dark mode colors to match Facebook's dark theme */
-  --background: #18191a;
-  --foreground: #e4e6ea;
-  --card: #242526;
-  --card-foreground: #e4e6ea;
-  --popover: #18191a;
-  --popover-foreground: #e4e6ea;
-  --primary: #2d88ff;
+  /* Dark keeps the same Goriber palette (deep-purple ground) so the
+     redesign never falls back to the old Facebook-blue dark theme. */
+  --background: #2e1b33;
+  --foreground: #fbf8f1;
+  --card: #3a2542;
+  --card-foreground: #fbf8f1;
+  --popover: #2e1b33;
+  --popover-foreground: #fbf8f1;
+  --primary: #ff2e7e;
   --primary-foreground: #ffffff;
-  --secondary: #4267b2;
-  --secondary-foreground: #ffffff;
-  --muted: #3a3b3c;
-  --muted-foreground: #b0b3b8;
-  --accent: #2d88ff;
-  --accent-foreground: #ffffff;
-  --destructive: #f02849;
+  --secondary: #ffb020;
+  --secondary-foreground: #2e1b33;
+  --muted: #3a2542;
+  --muted-foreground: #d9c8e8;
+  --accent: #ffb020;
+  --accent-foreground: #2e1b33;
+  --destructive: #f43f5e;
   --destructive-foreground: #ffffff;
-  --border: #3a3b3c;
-  --input: #3a3b3c;
-  --ring: #2d88ff;
-  --chart-1: #2d88ff;
-  --chart-2: #4267b2;
-  --chart-3: #66bb6a;
-  --chart-4: #ab47bc;
-  --chart-5: #ef5350;
-  --radius: 0.5rem;
-  --sidebar: #18191a;
-  --sidebar-foreground: #e4e6ea;
-  --sidebar-primary: #242526;
-  --sidebar-primary-foreground: #e4e6ea;
-  --sidebar-accent: #2d88ff;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #3a3b3c;
-  --sidebar-ring: #2d88ff;
+  --border: rgba(251, 248, 241, 0.16);
+  --input: rgba(251, 248, 241, 0.18);
+  --ring: #ff5c9e;
+  --chart-1: #ff2e7e;
+  --chart-2: #ffb020;
+  --chart-3: #00a878;
+  --chart-4: #ff9a3d;
+  --chart-5: #25d366;
+  --radius: 1rem;
+  --sidebar: #2e1b33;
+  --sidebar-foreground: #fbf8f1;
+  --sidebar-primary: #ff2e7e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3a2542;
+  --sidebar-accent-foreground: #fbf8f1;
+  --sidebar-border: rgba(251, 248, 241, 0.16);
+  --sidebar-ring: #ff5c9e;
 }
 
 @theme inline {
-  /* Added multiple Google Fonts as requested */
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-hind);
   --font-mono: var(--font-jetbrains-mono);
-  --font-display: var(--font-poppins);
-  --font-body: var(--font-inter);
+  --font-display: var(--font-baloo);
+  --font-body: var(--font-hind);
+  --font-label: var(--font-hind);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -107,10 +116,19 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: 0rem;
-  --radius-md: 0rem;
-  --radius-lg: 0rem;
-  --radius-xl: 0rem;
+  --color-ink: var(--ink);
+  --color-warm-snow: var(--warm-snow);
+  --color-outline-pale: var(--outline-pale);
+  --radius-sm: 1rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --shadow-hard: 4px 4px 0 0 #2e1b33;
+  --shadow-hard-sm: 3px 3px 0 0 #2e1b33;
+  --shadow-hard-lg: 6px 6px 0 0 #2e1b33;
+  --shadow-hard-pink: 4px 4px 0 0 #ff2e7e;
+  --shadow-pink-glow: 0 8px 20px rgba(255, 46, 126, 0.35);
+  --animate-marquee: marquee 26s linear infinite;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -119,6 +137,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @layer base {
@@ -126,204 +149,54 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+    background-image: radial-gradient(rgba(46, 27, 51, 0.055) 1.2px, transparent 1.3px);
+    background-size: 22px 22px;
   }
-
-  /* Custom scrollbar styling */
-  ::-webkit-scrollbar {
-    width: 8px;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-baloo), var(--font-hind), sans-serif;
+    letter-spacing: -0.02em;
   }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-muted;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent;
-  }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--background); }
+  ::-webkit-scrollbar-thumb { background: #eadfc9; border-radius: 99px; border: 2px solid var(--background); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+  ::selection { background: var(--primary); color: #fff; }
 }
 
-/* Custom animations for loading and transitions */
-@keyframes pulse-glow {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
+@keyframes pulse-glow { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.05); } }
+@keyframes slide-in-right { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slide-out-right { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
+@keyframes loading-bar { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@keyframes spin-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+@keyframes fade-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scale-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes bounce-in { 0% { opacity: 0; transform: scale(0.3); } 50% { opacity: 1; transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes progress-indeterminate { 0% { transform: translateX(-100%); } 100% { transform: translateX(400%); } }
 
-@keyframes slide-in-right {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-slide-in-right { animation: slide-in-right 0.3s ease-out; }
+.animate-slide-out-right { animation: slide-out-right 0.3s ease-in; }
+.animate-loading-bar { animation: loading-bar 1.5s ease-in-out infinite; }
+.animate-shimmer { animation: shimmer 2s ease-in-out infinite; }
+.animate-spin-reverse { animation: spin-reverse 1s linear infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.5s ease-out both; }
+.animate-scale-in { animation: scale-in 0.3s ease-out both; }
+.animate-bounce-in { animation: bounce-in 0.6s ease-out; }
+.animate-progress-indeterminate { animation: progress-indeterminate 2s ease-in-out infinite; }
 
-@keyframes slide-out-right {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
+.loading-skeleton { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; }
+.notification-enter { animation: slide-in-right 0.3s ease-out, bounce-in 0.6s ease-out; }
+.notification-exit { animation: slide-out-right 0.3s ease-in; }
+.smooth-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.hover-lift { transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; }
+.hover-lift:hover { transform: translateY(-3px); }
 
-@keyframes loading-bar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+/* Sticker chip + gradient headline helpers */
+.chip-sticker { @apply inline-flex items-center gap-1.5 rounded-full border-2 border-[#2E1B33] px-3.5 py-1.5 text-[13px] font-bold shadow-hard-sm; font-family: var(--font-hind), sans-serif; }
+.text-gradient-pink { background: linear-gradient(92deg, #ff2e7e 10%, #ff9a3d 60%, #ffb020); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* Added new animations for enhanced loading and notification systems */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes spin-reverse {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes progress-indeterminate {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.3s ease-out;
-}
-
-.animate-slide-out-right {
-  animation: slide-out-right 0.3s ease-in;
-}
-
-.animate-loading-bar {
-  animation: loading-bar 1.5s ease-in-out infinite;
-}
-
-/* Added new animation classes */
-.animate-shimmer {
-  animation: shimmer 2s ease-in-out infinite;
-}
-
-.animate-spin-reverse {
-  animation: spin-reverse 1s linear infinite;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.3s ease-out;
-}
-
-.animate-bounce-in {
-  animation: bounce-in 0.6s ease-out;
-}
-
-.animate-progress-indeterminate {
-  animation: progress-indeterminate 2s ease-in-out infinite;
-}
-
-/* Enhanced loading states with better visual feedback */
-.loading-skeleton {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s ease-in-out infinite;
-}
-
-.notification-enter {
-  animation: slide-in-right 0.3s ease-out, bounce-in 0.6s ease-out;
-}
-
-.notification-exit {
-  animation: slide-out-right 0.3s ease-in;
-}
-
-/* Added smooth transitions for better UX */
-.smooth-transition {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-lift {
-  transition: transform 0.2s ease-out;
-}
-
-.hover-lift:hover {
-  transform: translateY(-2px);
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none !important; }
 }

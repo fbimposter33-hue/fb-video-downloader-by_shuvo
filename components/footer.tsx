@@ -1,6 +1,6 @@
 "use client"
 
-import { Heart, Download, Shield, Zap, Github, Mail, ExternalLink } from "lucide-react"
+import { Heart, Download, Shield, Zap, Github, Mail, ExternalLink, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface FooterProps {
@@ -25,6 +25,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/fbimposter33-hue", label: "GitHub" },
+    { icon: Send, href: "https://t.me/shuvon1ss", label: "Telegram" },
     {
       icon: () => (
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -38,54 +39,44 @@ export function Footer({ onNavigate }: FooterProps) {
   ]
 
   return (
-    <footer className="bg-card border-t border-border mt-16">
+    <footer className="relative mt-0 border-t-4 border-[#FF2E7E] bg-[#2E1B33] text-[#FBF8F1]">
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse-glow">
-                <span className="text-primary-foreground font-display font-bold text-lg">FB</span>
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border-2 border-[#FBF8F1] bg-[#FF2E7E] shadow-[3px_3px_0_0_#FFB020]">
+                <span className="font-display text-base font-extrabold text-white">FB</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-card-foreground">Facebook Downloader</h3>
+              <h3 className="font-display text-xl font-extrabold text-white">SHUVO Facebook Downloader</h3>
             </div>
-            <p className="text-muted-foreground text-sm text-pretty">
-              The most advanced and stylish Facebook video downloader. Download your favorite videos in high quality,
-              fast and secure.
+            <p className="text-sm text-[#FBF8F1]/70 text-pretty">
+              Download your favorite Facebook videos and reels in high quality — fast, free and secure, with no registration required.
             </p>
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-1 text-sm text-[#FBF8F1]/70">
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
+              <Heart className="w-4 h-4 text-[#FF2E7E] animate-pulse" />
               <span>by Shuvo Ahmed</span>
             </div>
           </div>
 
-          {/* Features Section */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-lg text-card-foreground">Features</h4>
+            <h4 className="font-display font-bold text-lg text-white">Features</h4>
             <ul className="space-y-3">
               {features.map((feature, index) => (
-                <li
-                  key={index}
-                  className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-card-foreground transition-colors"
-                >
-                  <feature.icon className="w-4 h-4 text-primary" />
+                <li key={index} className="flex items-center space-x-3 text-sm text-[#FBF8F1]/70 transition-colors hover:text-white">
+                  <feature.icon className="w-4 h-4 text-[#FFB020]" />
                   <span>{feature.text}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-lg text-card-foreground">Quick Links</h4>
+            <h4 className="font-display font-bold text-lg text-white">Quick Links</h4>
             <ul className="space-y-3">
               {links.map((link, index) => (
                 <li key={index}>
-                  <button
-                    onClick={link.action}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2 group"
-                  >
+                  <button onClick={link.action} className="group flex items-center space-x-2 text-sm text-[#FBF8F1]/70 transition-colors hover:text-[#FFB020]">
                     <span>{link.label}</span>
                     <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </button>
@@ -94,18 +85,17 @@ export function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
-          {/* Contact & Social */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-lg text-card-foreground">Connect</h4>
+            <h4 className="font-display font-bold text-lg text-white">Connect</h4>
             <div className="space-y-3">
-              <p className="text-sm text-muted-foreground">Follow us for updates and support</p>
+              <p className="text-sm text-[#FBF8F1]/70">Follow for updates and support</p>
               <div className="flex space-x-2">
                 {socialLinks.map((social, index) => (
                   <Button
                     key={index}
                     variant="ghost"
                     size="sm"
-                    className="w-10 h-10 p-0 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                    className="h-10 w-10 rounded-2xl border-2 border-[#FBF8F1]/25 p-0 text-[#FBF8F1] transition-all duration-300 hover:scale-110 hover:border-[#FF2E7E] hover:bg-[#FF2E7E] hover:text-white"
                     onClick={() => window.open(social.href, "_blank")}
                   >
                     <social.icon className="w-4 h-4" />
@@ -113,65 +103,20 @@ export function Footer({ onNavigate }: FooterProps) {
                   </Button>
                 ))}
               </div>
+              <a href="https://t.me/shuvon1ss" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#FFB020] hover:text-[#FF2E7E]">@shuvon1ss on Telegram</a>
             </div>
           </div>
         </div>
 
-        {/* Animated Divider */}
-        <div className="my-8 relative">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-border"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="bg-card px-4">
-              <div className="flex space-x-2">
-                {[0, 1, 2].map((index) => (
-                  <div
-                    key={index}
-                    className="w-2 h-2 bg-primary animate-bounce"
-                    style={{ animationDelay: `${index * 0.2}s`, animationDuration: "2s" }}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="my-8 border-t border-[#FBF8F1]/15" />
 
-        {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="text-sm text-muted-foreground text-center md:text-left">
-            <p>&copy; {currentYear} Facebook Video Downloader. All rights reserved.</p>
-          </div>
-
+          <p className="text-center text-sm text-[#FBF8F1]/60 md:text-left">&copy; {currentYear} SHUVO Facebook Downloader. All rights reserved.</p>
           <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
-            <button
-              onClick={() => onNavigate?.("privacy")}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Privacy Policy
-            </button>
-            <button
-              onClick={() => onNavigate?.("terms")}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Terms of Service
-            </button>
-            <button
-              onClick={() => onNavigate?.("disclaimer")}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Disclaimer
-            </button>
+            <button onClick={() => onNavigate?.("privacy")} className="text-[#FBF8F1]/60 transition-colors hover:text-[#FFB020]">Privacy Policy</button>
+            <button onClick={() => onNavigate?.("terms")} className="text-[#FBF8F1]/60 transition-colors hover:text-[#FFB020]">Terms of Service</button>
+            <button onClick={() => onNavigate?.("disclaimer")} className="text-[#FBF8F1]/60 transition-colors hover:text-[#FFB020]">Disclaimer</button>
           </div>
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse" />
-          <div
-            className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-accent/10 to-primary/10 animate-pulse"
-            style={{ animationDelay: "1s" }}
-          />
         </div>
       </div>
     </footer>

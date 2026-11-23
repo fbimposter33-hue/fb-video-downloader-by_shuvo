@@ -65,7 +65,7 @@ export function UrlInput({ value, onChange, onSubmit, isLoading = false }: UrlIn
           value={value}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
-          className={`pr-12 py-4 text-base h-14 ${!isValidUrl ? "border-destructive focus:ring-destructive" : ""}`}
+          className={`h-14 rounded-2xl border-2 bg-[#FFF9F0] pr-12 py-4 font-mono text-sm text-foreground placeholder:text-[#8B7E8C] focus:border-[#FF2E7E] focus:bg-white focus:ring-4 focus:ring-[#FF2E7E]/20 md:text-base ${!isValidUrl ? "border-destructive focus:ring-destructive" : "border-[#E1DAD0]"}`}
           disabled={isLoading}
         />
 
@@ -76,7 +76,7 @@ export function UrlInput({ value, onChange, onSubmit, isLoading = false }: UrlIn
               variant="ghost"
               size="sm"
               onClick={handleClear}
-              className="h-8 w-8 p-0 hover:bg-destructive/10"
+              className="h-9 w-9 rounded-xl border-2 border-[#E1DAD0] bg-white p-0 shadow-hard-sm hover:bg-destructive/10"
               disabled={isLoading}
             >
               <X className="w-4 h-4 text-destructive" />
@@ -87,7 +87,7 @@ export function UrlInput({ value, onChange, onSubmit, isLoading = false }: UrlIn
               variant="ghost"
               size="sm"
               onClick={handlePaste}
-              className="h-8 w-8 p-0 hover:bg-accent/10"
+              className="h-9 w-9 rounded-xl border-2 border-[#E1DAD0] bg-white p-0 shadow-hard-sm hover:bg-[#FFE3EF]"
               disabled={isLoading}
             >
               <Clipboard className="w-4 h-4 text-muted-foreground" />

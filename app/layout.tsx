@@ -1,27 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { DM_Sans, Poppins, Inter, JetBrains_Mono } from "next/font/google"
+import { Baloo_Da_2, Hind_Siliguri, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
-const dmSans = DM_Sans({
+const baloo = Baloo_Da_2({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-dm-sans",
+  variable: "--font-baloo",
 })
 
-const poppins = Poppins({
-  subsets: ["latin"],
+const hind = Hind_Siliguri({
+  subsets: ["latin", "bengali"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-poppins",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  variable: "--font-hind",
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -31,35 +26,35 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Facebook Video Downloader - Download FB Videos in High Quality",
+  title: "SHUVO Facebook Downloader - Download FB Videos in High Quality",
   description:
     "Download Facebook videos, reels, and posts in high quality for free. Fast, secure, and easy-to-use Facebook video downloader with no registration required.",
   keywords:
     "facebook video downloader, download facebook videos, fb video downloader, facebook reels downloader, facebook video download, social media downloader",
-  authors: [{ name: "Facebook Video Downloader" }],
-  creator: "Facebook Video Downloader",
-  publisher: "Facebook Video Downloader",
+  authors: [{ name: "Shuvo Ahmed" }],
+  creator: "Shuvo Ahmed",
+  publisher: "SHUVO Facebook Downloader",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://facebook-video-downloader.vercel.app"),
+  metadataBase: new URL("https://fb-video-downloader-byshuvo.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Facebook Video Downloader - Download FB Videos in High Quality",
+    title: "SHUVO Facebook Downloader - Download FB Videos in High Quality",
     description:
       "Download Facebook videos, reels, and posts in high quality for free. Fast, secure, and easy-to-use Facebook video downloader.",
-    url: "https://facebook-video-downloader.vercel.app",
-    siteName: "Facebook Video Downloader",
+    url: "https://fb-video-downloader-byshuvo.vercel.app",
+    siteName: "SHUVO Facebook Downloader",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Facebook Video Downloader - Download FB Videos",
+        alt: "SHUVO Facebook Downloader - Download FB Videos",
       },
     ],
     locale: "en_US",
@@ -67,11 +62,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Facebook Video Downloader - Download FB Videos in High Quality",
+    title: "SHUVO Facebook Downloader - Download FB Videos in High Quality",
     description:
       "Download Facebook videos, reels, and posts in high quality for free. Fast, secure, and easy-to-use Facebook video downloader.",
     images: ["/og-image.png"],
-    creator: "@fbvideodownloader",
+    creator: "@shuvon1ss",
   },
   robots: {
     index: true,
@@ -84,9 +79,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   category: "technology",
   generator: "Next.js",
 }
@@ -98,9 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`font-sans ${dmSans.variable} ${poppins.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+      <body className={`font-sans ${baloo.variable} ${hind.variable} ${jetbrainsMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
